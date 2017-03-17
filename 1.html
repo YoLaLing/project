@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+	<title>浏览器状态栏交替显示信息</title>
+	<script type="text/javascript">
+		var yourword1="欢迎光临！";
+		var yourword2="夏天假日酒店";
+		var speed=1500;
+		var control=true;
+		function flash(){
+			if(control==true){
+				window.status=yourword1;
+				control=false;
+			}
+			else{
+				window.status=yourword2;
+				control=true;
+			}
+			setTimeout("flash()",speed);
+		}
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+window.onload=flash();
+</script>
+</body>
+</html>
